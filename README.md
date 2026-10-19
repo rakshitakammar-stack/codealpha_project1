@@ -75,6 +75,18 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Run locally without MySQL
+
+To run the app without XAMPP, use the included SQLite development settings:
+
+```bash
+cd config
+python manage.py migrate --settings=config.dev_settings
+python manage.py runserver --settings=config.dev_settings
+```
+
+This stores local data in `config/db.sqlite3`, which is ignored by Git.
+
 ### 4. Start XAMPP
 
 - Open **XAMPP Control Panel**
